@@ -4,7 +4,8 @@
   "description": "Learn GCP deployment",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/app.js",
+    "dev": "env $(grep -v '^#' .env) node index.js",
+    "start": "env $(grep -v '^#' .env) node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "khuat.duc.khanh@azoom.jp",
