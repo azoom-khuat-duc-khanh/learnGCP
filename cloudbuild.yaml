@@ -29,7 +29,6 @@ steps:
       - |
         gcloud run deploy ${_CLOUD_RUN_SERVICE_NAME} \
           --image gcr.io/$_PROJECT_ID/${_CLOUD_RUN_SERVICE_NAME}:latest
-          --region asia-northeast1 \
           --platform managed \
 substitutions:
   _ENV: staging
