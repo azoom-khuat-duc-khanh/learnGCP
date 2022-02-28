@@ -32,7 +32,6 @@ steps:
           --allow-unauthenticated \
           --region asia-northeast1 \
           --platform managed \
-          --add-cloudsql-instances ${_INSTANCE_CONNECTION_NAME} 
 substitutions:
   _ENV: staging
   _SECRET_NAME: learnGCP
