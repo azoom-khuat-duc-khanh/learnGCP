@@ -28,7 +28,7 @@ steps:
       - '-c'
       - |
         gcloud run deploy ${_CLOUD_RUN_SERVICE_NAME} \
-          --image gcr.io/$_PROJECT_ID/${_CLOUD_RUN_SERVICE_NAME}:$TAG_NAME \
+          --image gcr.io/$_PROJECT_ID/${_CLOUD_RUN_SERVICE_NAME}:latest
           --allow-unauthenticated \
           --region asia-northeast1 \
           --platform managed \
