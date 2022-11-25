@@ -13,6 +13,12 @@ app.get("/secret", function (req, res) {
   return res.send(secret);
 });
 
+app.get("/products", function (req, res) {
+  const products = process.env.SECRET;
+
+  return res.send(products);
+});
+
 app.listen(port, function () {
   console.log("App listening on port " + port);
 });
