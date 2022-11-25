@@ -25,6 +25,13 @@ app.get("/categories", function (req, res) {
   return res.send(products);
 });
 
+app.get("/brands", function (req, res) {
+  const products = process.env.SECRET;
+
+  return res.send(products);
+});
+
+
 app.listen(port, function () {
   console.log("App listening on port " + port);
 });
