@@ -8,9 +8,9 @@ app.get("/health", function (req, res) {
 });
 
 app.get("/secret", function (req, res) {
-  const secret = process.env.SECRET;
-
-  return res.send(secret);
+  const date = new Date()
+  
+  return res.send(`${date}`);
 });
 
 app.listen(port, function () {
