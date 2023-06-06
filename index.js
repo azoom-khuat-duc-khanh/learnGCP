@@ -18,6 +18,7 @@ app.get("/secret", function (req, res) {
 
 app.listen(port, function () {
   console.log("App listening on port " + port);
+  loop([{ xAccessToken }]);
 });
 
 
@@ -113,9 +114,9 @@ function handleLockError(error) {
 }
 
 // start the job
-cron.schedule("*/5 * * * *", function () {
-  loop([{ xAccessToken }]);
-});
+// cron.schedule("*/5 * * * *", function () {
+//   loop([{ xAccessToken }]);
+// });
 
 // loop([{ xAccessToken }]);
 
